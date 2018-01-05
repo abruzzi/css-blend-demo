@@ -21,14 +21,19 @@ h1 {
 	font-size: 3rem;
 }
 
+.controls {
+	max-width: $max-width;
+	margin: 0 auto;
+}
+
 #file-upload {
-	margin: 4rem 0;
+	margin: 2rem 0;
 }
 
 #container {
 	max-width: $max-width;
-	height: 300px;
 	margin: 0 auto;
+	height: 300px;
 	background-color: orangered;
 	background-blend-mode: normal;
 	background-size: cover;
