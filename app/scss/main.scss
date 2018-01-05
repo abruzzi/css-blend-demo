@@ -1,23 +1,67 @@
 html {
+	font-family: 'Microsoft YaHei', sans-seirf;
 	font-size: 10px;
 }
 
-// #file-upload {
-// 	border: none;
-// 	background: orangered;
-// 	color: white;
-// 	padding: .4rem .8rem;
-// 	text-transform: uppercase;
-// }
+$max-width: 1000px;
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+h1 {
+	max-width: $max-width;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 2rem auto;
+	font-size: 3rem;
+}
 
 #file-upload {
 	margin: 4rem 0;
 }
 
 #container {
+	max-width: $max-width;
 	height: 300px;
+	margin: 0 auto;
 	background-color: orangered;
 	background-blend-mode: normal;
 	background-size: cover;
-	height: 80vh;
+	height: 60vh;
+}
+
+.blend-modes {
+	ul, li {
+		padding: 0;
+		margin: 0;
+	}
+	max-width: $max-width;
+	margin: 0 auto;
+
+	ul {
+		@extend %clearfix;	
+	}
+
+	li {
+		list-style: none;
+		float: left;
+		display: table;
+		width: 12.5%;
+
+		.thumb {
+			display: table-cell;
+			background-color: orangered;
+			color: white;
+			text-align: center;
+			vertical-align: middle;
+			height: 8rem;
+		}
+	}
+
+	
 }
